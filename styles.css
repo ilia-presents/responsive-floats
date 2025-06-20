@@ -51,7 +51,7 @@ header {
     /*width: 100%;*/
     height: 260px;
     border-radius: 11px 11px 0 0;
-    background-image: url("images2/calming_sunset.jpg");
+    background-image: url("images/calming_sunset.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     /*background-size: cover;*/
@@ -72,7 +72,7 @@ header {
         }
 
         header .head-inner-wrapper h1.logo {
-            background-image: url(images2/logo.jpg);
+            background-image: url(images/logo.jpg);
             background-position: center center;
             background-repeat: no-repeat;
             width: 35%;
@@ -432,7 +432,7 @@ article {
     @Media screen and (max-width: 768px) {
 
         header {
-            background-image: url("images2/calming_sunset_mid.jpg");
+            background-image: url("images/calming_sunset_mid.jpg");
         }
 
             header .head-inner-wrapper .right-logo-wrapper .right-logo {
@@ -492,7 +492,7 @@ article {
 @Media screen and (max-width: 550px) {
 
     header {
-        background-image: url("images2/calming_sunset_mid_sm.jpg");
+        background-image: url("images/calming_sunset_mid_sm.jpg");
     }
 
     main #nav-wrapper nav ul li {
@@ -521,7 +521,7 @@ article {
 @Media screen and (max-width: 480px) {
 
     header {
-        background-image: url("images2/calming_sunset_small.jpg");
+        background-image: url("images/calming_sunset_small.jpg");
         padding-top: 30px;
         overflow:hidden;
     }
@@ -569,7 +569,7 @@ article {
         height: 50px;
         /*float:right;*/
         width: 100%;
-        background: url(images2/menu_icon.png) no-repeat 98% center;
+        background: url(images/menu_icon.png) no-repeat 98% center;
         cursor: pointer;
     }
 
