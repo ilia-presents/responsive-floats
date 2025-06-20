@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Ilia Site's Homepage">
+    <meta name="viewport" content="width=device-width">
+    <title>Ilia's Site</title>
+    <link href="styles.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="head-inner-wrapper">
+            <h1 class="logo">Ilia's site</h1>
+            <div class="right-logo-wrapper">
+                <div class="right-logo">
+                    <p class="motto-italic">For the productive days rewarded with relaxing evenings</p> - Seneca.
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Start homepage content   body-wrapper -->
+    <main>
+        <div id="nav-wrapper">
+            <input type="checkbox" id="nav-toggle" />
+            <nav>
+                <label for="nav-toggle" class="nav-icon"></label>
+                <!--<a class="nav-icon"></a>-->
+                <h3>Main Navigation</h3>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">C#</a></li>
+                    <li><a href="">MVC</a></li>
+                    <li><a href="">HTML / CSS</a></li>
+                    <li><a href="">Something</a></li>
+                </ul>
+                <!--<div style="clear:both;"> </div>-->
+            </nav>
+        </div>
+        <div id="main-wrapper">
+            <section id="content-wrapper">
+                <div class="main-content">
+                    <article>
+                        <h2 class="class-h2">Responsive page with floating divs demo</h2>
+                        <p class="spacer">This page is build using the good ol' floating layout. It is completely responsive and uses media queries. It uses no JS, just one little CSS trick when it comes to hide and show the menu for the mobile version.</p>
+
+                        <p class="spacer">You can try it yourself or watch my video presentation first.</p>
+
+                        <p class="spacer">More on the video presentation or the transcript bellow. <a href="XXXXXXXXXXXXXXXXXXX" class="link-grooming" target="_blank">Its code </a> on github.</p>
+
+                        <div class="container-border-padd margin-bottom-midd">
+                            <div>
+                                <div class="video-container video-container-16x9">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mkNrnW4vuDE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="spacer">Transcript</p>
+                        <div class="overlfow-encloser">
+                        <div class="overflow-fix">
+
+                            <p class="spacer">In my CSS file I have used complete full paths to the page's main parts.I just wanted to cover what experts claim to be a rule for building the page's main frame (master page). Which is ...a quick look …</p>
+
+                            <p class="spacer">Starting from top - the background image has 4 different smaller versions which I am switching with media queries.</p>
+
+                            <p class="spacer">The semi transparent strip has carefully chosen transparency using rgba(36, 87, 131, 0.2) or alpha transparency and not opacity: x; as the later would change both the opacity of the container and its content altogether. The elements included in it (h1 with the logo and the right logo) are using opacity: x;. And they are floated inside the strip.</p>
+
+                            <p class="spacer">The horizontal navigation, regular with switching colors on hover. Just for the exercise I have included a short 200 ms background color transition.</p>
+
+                            <p class="spacer">The nav (#nav-wrapper to be exact) includes before and after elements which display tiny horizontal strips above and bellow the nav.</p>
+
+                            <p class="spacer">The body of the page underneath has two floated columns. The adds on the right are with fixed 200 pxs width, which I imagined as not negotiable requirement. </p>
+
+                            <p class="spacer">The content section has a colored vertical right border as a separator. We know that its behavior is by default to end when its content ends. So the old fix for that is included, margin-bottom: -99999px; padding-bottom: 99999px;</p>
+
+                            <p class="spacer">Footer, 3 floated uls.</p>
+
+                            <p class="spacer">It is worth to mention the iframe youtube “embeder” package classes. I took them from one major course, I took at the begging of the year. I had them printed and I keep them in an underground vault :) . In the same vault I keep one stolen Coca Cola recipe.</p>
+
+                            <p class="spacer">Now starting to shrink.</p>
+
+                            <p class="spacer">First jump is at 880. Very subtle. Only the width of the adds section gets increased as adds are fixed width and their space runs out quickly.</p>
+
+                            <p class="spacer">At 768, the main content section and the adds section on the right become block (no more floats) and so the right section drops underneath. The content’s right vertical border is not needed any more so it is reset from that fix we applied at the beginning. Now this content need a bottom border but that is easy needs no special trucks.</p>
+
+                            <p class="spacer">Adds in the Adds section keep floating but now in 2 columns as their width changed to width 49.8%. I added one little trick - the last add if it is an odd number, I make it go in the middle as it nicer looking. Otherwise it will be pushed to the left making an L shape.</p>
+
+                            <p class="spacer">Exactly the same is for the uls in the footer, keep floating but in 2 columns with 48% width. Again the last odd number gets in the middle.</p>
+
+                            <p class="spacer">The header’s background image is also replaced.</p>
+
+                            <p class="spacer">At 550, one major change in the nav menu. The list items are still floating but now they are 2 columns only, as their width is set to 48%. The links inside them become inline-block and get their own additional padding and background color.</p>
+
+                            <p class="spacer">The header’s background image is replaced again.</p>
+
+                            <p class="spacer">At 480, no more floats. Starting from the header, the adds and the footer. The header has now 2 lines both with a semi transparent strip behind. Each and any can easily be switched off.</p>
+
+                            <p class="spacer">The nav hides and a hamburger menu appears. We know how it goes further. The switch is possible with a hidden checkbox, i.e. no JS. The checkbox is hidden (display: none;) but its label is visible and it carries the same functionality as the checkbox itself. Some CSS trick, hey.</p>
+
+                            <p class="spacer">One little disadvantage of those checkbox switches is that they can be switched clicking on hamburger only. We can not click somewhere aside and expect the menu to disappear.</p>
+
+                            <p class="spacer">And for third time the background image is replaced.</p>
+
+                            <p class="spacer">At 330 we have just one little redesign for the bottom logo.</p>
+
+                            <p class="spacer">Now repeating the shrinks altogether for the top, middle and bottom part. One more play if you can have time to follow me, with the nav hiding using the display or height.</p>
+
+                            <p class="spacer">Let me show you how the strips can be switched off.       </p>
+
+                            <p class="spacer">I little creative self critique, I have built this page some long time ago and now I am realizing that semantically the nav should be included inside the header section. Not as it is now in the main. I may have had a reason to do it that way. Can not recall.</p>
+
+                            <p class="spacer">Next is the logo on the top left is a h1 styled with a background image. If it has to be a link (usual trend - image toward main page) I really would not know how to proceed. I mean mostly from SEO point of view should I include a link inside the h1. Now HTML5 allows block elements inside an anchor … ?? Which is yet one more option on the table. </p>
+
+                            <p class="spacer">Or should I completely redesign it so to have the image as link separately and the h1 separately ??</p>
+
+                            <p class="spacer">Another creative self critique would be about the external borders. They are now built in peaces - header and main carry their own pieces, which by the rules of the containers follow one right after the other and there is no gap. But I feel a little unsettled abou that. I would like to have one entire page container and have all the page’s pieces (header, main footer) inside it. Is this semantically OK. Why HTML 5 does not have such a container ??!! </p>
+
+                            <p class="spacer">Now if some think that they want to see just one little detail and not to bother with the entire page’s code, I will go through the code slowly with the page down button.</p>
+                        </div>
+                        </div>
+                            <p class="spacer">Well that will be all. As usual feel free to contact me, should you have more info from me.</p>
+                        <p class="spacer">Thank you,</p>
+                        <p class="spacer">Have a great one.</p>
+                    </article>
+                </div>
+            </section>
+            <section id="adds">
+                <h3>
+                    Adds Section
+                </h3>
+                <div id="adds-wrapper">
+                    <div class="one-add-wrapper">
+                        <div class="add">
+                            Add 1
+                        </div>
+                    </div>
+                    <div class="one-add-wrapper">
+                        <div class="add">
+                            Add 2
+                        </div>
+                    </div>
+                    <div class="one-add-wrapper">
+                        <div class="add">
+                            Add 3
+                        </div>
+                    </div>
+                    <!--<div class="one-add-wrapper">
+                        <div class="add">
+                            Add 4
+                        </div>
+                    </div>-->
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- End homepage content -->
+    <footer>
+        <div class="footer-wrapper">
+            <ul>
+                <li>ILIA SHTEREV</li>
+                <li>Vratza or Sofia</li>
+                <li>Bulgaria / Europe</li>
+            </ul>
+            <ul>
+                <li>+359 878 83 98 63</li>
+                <li>Skipe:</li>
+                <li class="smaller-size">ilia.shterev.sk@gmail.com</li>
+                <li class="smaller-size"><a href="callto:ilia.shterev.sk@gmail.com">ilia.shterev.sk@gmail.com</a></li>
+            </ul>
+            <ul>
+                <li><img src="images2/logo_small.jpg" alt="footer logo" class="footer-img"></li>  <!--82 X 28 ilia's site 140 X 82  -->
+                <li>&copy; All rights reserved 2020</li>
+            </ul>
+        </div>
+    </footer>
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+</body>
+</html>
