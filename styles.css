@@ -1,0 +1,641 @@
+
+:root {
+    --body_bg_color: #f8f6f4;
+    --head_inner_wrapper: rgba(36, 87, 131, 0.2);
+    --header_right_logo: #14344b;
+    --nav_menu_strips: #b59696;
+    --side_vert_borders: #d8d0d0;
+    --inside_vert_border: #cababa;
+    --inside_horz_border: #cababa;
+    --footer_bg_color: #634800;
+    --footer_color: white;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*html, body {
+    height: 100%;
+}*/
+
+body {
+    font-family: Georgia;
+    margin: 4px auto;
+    max-width: 1000px;
+    padding: 0;
+    
+}
+
+ul {
+    list-style-type: none;
+}
+
+ a {
+    text-decoration: none;
+}
+
+/*img {
+    width: 100%;
+    height: auto;
+}*/
+
+/* As many experts claim the page's main structure should be defined by its full parts selectors.
+   The specific details that can go woI heva tryied to keep that in ordr as much as I could. 
+*/
+
+header {
+    padding-top: 90px;
+    /*width: 100%;*/
+    height: 260px;
+    border-radius: 11px 11px 0 0;
+    background-image: url("images2/calming_sunset.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+    background-size: auto;
+
+}
+
+    header .head-inner-wrapper {
+        background-color: var(--head_inner_wrapper);
+        width: 100%;
+        height: 82px;
+    }
+        /* Clearfix with after */
+        header .head-inner-wrapper::after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+
+        header .head-inner-wrapper h1.logo {
+            background-image: url(images2/logo.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 35%;
+            height: 100%;
+            text-indent: -10000px;
+            display: inline-block;
+            float: left;
+            margin: 0 auto;
+            opacity: 0.7;
+        }
+
+        header .head-inner-wrapper .right-logo-wrapper {
+            width: 65%;
+            float: left;
+        }
+
+            header .head-inner-wrapper .right-logo-wrapper .right-logo {
+                font-size: 1.0rem;
+                color: white;
+                max-width: 17rem;
+                height: 82px;
+                padding: 0.7rem;
+                background-color: var(--header_right_logo);
+                opacity: 0.7;
+                border-radius: 10px;
+                border: 1px solid black;
+                margin: 0 25% 0 auto;
+            }
+
+.motto-italic {
+    font-style: italic;
+}
+
+main {
+    background-color: var(--body_bg_color);
+    border-right: 1px solid var(--side_vert_borders);
+    border-left: 1px solid var(--side_vert_borders);
+    overflow: hidden;
+    /*background-color: lightcoral;*/
+}
+
+    main #nav-wrapper {
+        width: 100%;
+    }
+        /* strips over and under nav menu*/
+        main #nav-wrapper::before, #nav-wrapper::after {
+            content: " ";
+            width: 100%;
+            height: 4px;
+            display: block;
+            background-color: var(--nav_menu_strips);
+        }
+     /* end strips over and under nav menu */
+
+    main #nav-wrapper {
+        /*overflow: auto;*/
+    }
+
+        main #nav-wrapper nav {
+            /*height:34px;*/
+        }
+
+                /* Clearfix with after */
+            main #nav-wrapper nav::after {
+                content: " ";
+                display: block;
+                clear: both;
+            }
+
+
+        main #nav-wrapper #nav-toggle {
+            display: none;
+        }
+
+            /*main #nav-wrapper #nav-toggle:checked ~ nav ul{*/
+                /*height: auto;*/
+                /*display: block;                
+            }*/
+
+        main #nav-wrapper nav h2 {
+            margin-bottom:14px;
+        }
+
+            main #nav-wrapper nav h3 {
+                text-indent: -10000px;
+                float:left;
+                /*height: 0;*/
+            }
+
+        main #nav-wrapper nav ul {
+            float: right;
+            background-color: #9e8383; /*#505050 #bf9595*/
+            padding: 5px 20px;
+        }
+
+            main #nav-wrapper nav ul li {
+                float: left;
+                border-right:1px solid black;
+                /*padding: 5px 18px;*/
+            }
+
+                    main #nav-wrapper nav ul li:first-child {
+                        border-left: 1px solid black;
+                    }
+
+                main #nav-wrapper nav ul li a {
+                    padding: 5px 18px;
+                    color: white;
+                    font-size: 1.1rem;
+                    /* Using transition here is mostly as proof of concept. 
+                        The timing-function can not be felt in such a short transition period
+                       and for the property of background-color. transition-delay - I have included 
+                        it commented just as an exersise. */
+                    transition: 200ms;
+                    transition-property: background-color;
+                    transition-timing-function: ease-in-out;
+                    /* transition-delay: 500ms; */
+                    /* ------------------------ */
+                    /* Eventual shorthand bellow. If there are two timing periods shown then the second is the the delay */
+                    /* transition: 200ms background-color ease-in-out 500ms; */
+                }
+                    main #nav-wrapper nav ul li a:hover {
+                        background-color: #bf9595;
+                    }
+
+    main #main-wrapper h2 {
+        margin-bottom:14px;
+    }
+
+    /* Clearfix with after */
+    main #main-wrapper::after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+
+    main #main-wrapper #content-wrapper {
+        float: left;
+        display: inline-block;
+        width: 76%;
+        border-right: 1px solid var(--inside_vert_border);
+        margin-bottom: -99999px;
+        padding-bottom: 99999px;
+    }
+
+        main #main-wrapper #content-wrapper .main-content {
+            margin: 0;
+            padding: 1rem;
+            /*text-align: justify;*/
+        }
+
+    main #main-wrapper #adds {
+        float: right;
+        display: inline-block;
+        width: 24%;
+        padding-top: 17px;
+    }
+
+    main #main-wrapper #adds h3{
+        width: 100%;
+        margin: 0 auto 15px auto;
+        text-align: center;
+    }
+
+        main #main-wrapper #adds .one-add-wrapper {
+            width: 100%;
+            margin-bottom: 20px
+        }
+
+            main #main-wrapper #adds .one-add-wrapper .add {
+                width: 200px;
+                height: 240px;
+                background-color: #d79c73;
+                padding-top: 12px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+footer {
+    background-color: var(--footer_bg_color);
+    padding: 1%;
+    width: 100%;
+    border-radius: 0 0 11px 11px;
+}
+
+    footer ul {
+        float: left;
+        padding: 0;
+        color: var(--footer_color);
+        font-weight: bold;
+        font-size: 1.2rem;
+        width: 32%;
+        margin-right: 1%;
+        text-align: center;
+    }
+
+    footer ul:last-child {
+            margin-right: 0;
+    }
+
+    footer li {
+            margin: 12px 0;
+    }
+
+    footer a {
+        color: var(--footer_color);
+        font-weight: bold;
+    }
+
+    footer::after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+
+    footer .empty-item {
+        height: 0.7rem;
+    }
+
+    footer .footer-img {
+        opacity: 0.9;
+    }
+
+/* Youtube video embeder*/
+.video-container {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+
+/* 16x9: YouTube; */
+.video-container-16x9 {
+    padding-bottom: 56.25%;
+}
+
+/* 4x3 Older Videos */
+.video-container-4x3 {
+    padding-bottom: 75%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* End Youtube video embeder*/
+
+
+article a::after{
+    content:" (Opens in new tab)";
+}
+
+article {
+    margin: 0 0 1.4rem 0;
+    padding: 0 1rem 1rem 1rem;
+    border: 1px solid #017d5b;
+    border-radius: 5px;
+}
+
+.overflow-fix {
+    height: 200px;
+    overflow-y: scroll;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.overlfow-encloser {
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    border: 1px solid #017d5b;
+    /*border-bottom: 1px solid #017d5b;*/
+    margin: 12px 0 12px 0;
+    border-radius: 5px;
+}
+
+
+.spacer {
+    margin: 0 0 .8rem 0;
+}
+
+    .spacer:nth-last-child(1) {
+        margin: 0;
+    }
+
+.link-grooming {
+    color: #00249c;
+    background-color: #edfdff;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 3px;
+}
+
+.class-h2 {
+    padding: 7px 12px;
+    background-color: #e2caca;
+    border-radius: 5px;
+    margin-top: 12px;
+    /*margin: 0 -1rem .9rem -1rem;*/
+}
+
+.container-border-padd {
+    border: 1px solid var(--side_vert_borders);
+    border-radius: 4px;
+    padding: .4rem;
+}
+
+.margin-bottom-midd {
+    margin-bottom: 20px;
+}
+
+.font-1-1rem-500 {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.font-0-8rem {
+    font-size: 0.8rem;
+}
+
+.smaller-size {
+    font-size: 0.8rem;
+}
+
+/* Scroll bar stert - width */
+.overflow-fix::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+.overflow-fix::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+.overflow-fix::-webkit-scrollbar-thumb {
+    background: #468484;
+    border-radius: 10px;
+    height: 48px;
+}
+/* Scroll bar End */
+
+/*  Media screens */
+/*  At the first media jump - extending a bit more the adds section as it contains fixed width prop adds.
+    Taking space from #content-wrapper */
+@Media screen and (max-width: 870px) {
+    main #main-wrapper #adds {
+        width: 27%;
+    }
+    main #main-wrapper #content-wrapper {
+        width: 73%;
+    }
+}
+
+    @Media screen and (max-width: 768px) {
+
+        header {
+            background-image: url("images2/calming_sunset_mid.jpg");
+        }
+
+            header .head-inner-wrapper .right-logo-wrapper .right-logo {
+                margin: 0 6% 0 auto;
+            }
+
+        main #main-wrapper #content-wrapper {
+            float: none;
+            display: block;
+            width: 100%;
+            margin: 0; /* Clearing margin-bottom: -99999px; needed for for a full lenght vertical border */
+            padding: 0; /* Clearing padding-bottom: 99999px; needed for for a full lenght vertical border */
+            border-right: 0;
+            border-bottom: 1px solid var(--inside_horz_border);
+        }
+
+        main #main-wrapper #adds {
+            float: none;
+            display: block;
+            width: 100%;
+        }
+
+            main #main-wrapper #adds #adds-wrapper {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+
+                main #main-wrapper #adds #adds-wrapper::after {
+                    content: " ";
+                    display: block;
+                    clear: both;
+                }
+
+                main #main-wrapper #adds #adds-wrapper .one-add-wrapper {
+                    width: 49.8%;
+                    float: left;
+                }
+
+                    main #main-wrapper #adds #adds-wrapper .one-add-wrapper:last-child:nth-child(odd) {
+                        width: 99.4%;
+                    }
+
+        footer ul {
+            width: 48%;
+            padding-bottom: 20px;
+        }
+            footer ul:last-child:nth-child(odd) {
+                width: 98%;
+            }
+        footer .empty-item {
+            height: 0;
+        }
+    }
+
+/* Shrinking #adds-wrapper's margin from 5 to 2% in order to */
+/* once again extend a bit more the adds section as it contains fixed width prop adds.  */
+@Media screen and (max-width: 550px) {
+
+    header {
+        background-image: url("images2/calming_sunset_mid_sm.jpg");
+    }
+
+    main #nav-wrapper nav ul li {
+        width: 48%;
+      
+        margin: 4px;
+        border: 0 !important;
+    }
+
+
+        main #nav-wrapper nav ul li a {
+            padding: 0;
+            display: inline-block;
+            padding: 4px 18px;
+            width: 100%;
+            background-color: #bf9595;
+            /*border-right: 1px solid black;*/
+        }
+
+    main #main-wrapper #adds #adds-wrapper {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
+@Media screen and (max-width: 480px) {
+
+    header {
+        background-image: url("images2/calming_sunset_small.jpg");
+        padding-top: 30px;
+        overflow:hidden;
+    }
+
+        header .head-inner-wrapper {
+            background-color: var(--head_inner_wrapper);       /*transparent*/
+        }
+
+        header .head-inner-wrapper h1.logo {
+            width: 100%;
+            display: block;
+            float: none;
+            margin: 0 auto;
+            margin-bottom:20px;
+        }
+
+        header .head-inner-wrapper .right-logo-wrapper {
+            background-color:var(--head_inner_wrapper);
+            width: 100%;
+            float: none;
+        }
+
+            header .head-inner-wrapper .right-logo-wrapper .right-logo {
+                margin: 0 auto;
+                border-radius: 10px;
+            }
+
+
+    main #nav-wrapper nav {
+        float: none;
+        width: 100%;
+    }
+
+    main #nav-wrapper #nav-toggle:checked ~ nav ul {
+        display: block;
+        height: auto;
+        /*height: 0;*/
+    }
+        main #nav-wrapper nav h3 {
+            height: 0;
+        }
+
+    main #nav-wrapper nav .nav-icon {
+        display: block;
+        height: 50px;
+        /*float:right;*/
+        width: 100%;
+        background: url(images2/menu_icon.png) no-repeat 98% center;
+        cursor: pointer;
+    }
+
+    /*main #nav-wrapper #nav-toggle {
+        display: none;
+    }
+
+        main #nav-wrapper #nav-toggle:checked ~ nav ul {
+            height: auto;
+        }*/
+
+        main #nav-wrapper nav ul {
+            padding: 0;
+            overflow: auto;
+            background-color: #9e8383;
+            float: none;
+            display: block;
+            height: 0;
+            transition: height 1s;
+        }
+
+        /*main #nav-wrapper nav ul.openMenu {  // remnant of my try with JS.
+            height: auto;
+        }*/
+
+        main #nav-wrapper nav ul li {
+            float: none;
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            border: 0;
+        }
+
+            main #nav-wrapper nav ul li:first-child {
+                border-left: 0;
+            }
+
+        main #nav-wrapper nav ul li a{
+            color:#fff;
+            padding:10px;
+            border-bottom: 1px solid #404040;
+            display:block;
+            margin:0;
+        }
+
+
+    main #main-wrapper #adds #adds-wrapper .one-add-wrapper {
+        float: none;
+        width: 100%;
+    }
+
+    footer ul {
+        width: 98%;
+    }
+        footer ul:nth-last-child(1):nth-child(odd) {
+            /*padding-bottom:20px;*/
+            width: 98%;
+        }
+}
+
+@Media screen and (max-width: 330px) {
+
+    header .head-inner-wrapper .right-logo-wrapper .right-logo {
+        font-size: 1.0rem;
+        width: 13rem;
+        padding: 0.8rem 6%;
+        height:auto;
+    }
+}
