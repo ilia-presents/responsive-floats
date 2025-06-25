@@ -24,7 +24,7 @@
 
 body {
     font-family: Georgia;
-    margin: 4px auto;
+    margin: 2px auto;
     max-width: 1000px;
     padding: 0;
 
@@ -100,10 +100,11 @@ header .head-inner-wrapper .right-logo-wrapper .right-logo {
     border-radius: 10px;
     border: 1px solid black;
     margin: 0 25% 0 auto;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding:8px;
+    /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; */
 }
 
 header .head-inner-wrapper .right-logo-wrapper .right-logo p {
@@ -146,7 +147,7 @@ main #nav-wrapper {
 }
 
 main #nav-wrapper nav {
-    /*height:34px;*/
+    background-color: #ffd7b4;
 }
 
 /* Clearfix with after */
